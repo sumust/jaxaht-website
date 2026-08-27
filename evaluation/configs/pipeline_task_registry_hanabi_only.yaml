@@ -1,0 +1,31 @@
+pipeline:
+  name: br_xp_tsne_publication
+  default_xp_config: heldout_xp_all_teammates_generated
+  label_prefix: all_teammates_norm_rows_
+  xp_csv_name: returned_episode_returns_mean_normalized=True.csv
+  output_root: results/pipeline_runs
+
+meta_figure:
+  output_png: results/publication/br_tsne_meta_hanabi_kde_contour.png
+  preset: journal-wide
+  density_backdrop: kde
+  density_contours: true
+  no_subplot_axis_ticks: true
+  hide_subplot_axis_labels: true
+  global_xlabel: t-SNE 1
+  global_ylabel: t-SNE 2
+
+domains:
+  hanabi:
+    br_scripts:
+      - scripts/run_hanabi_br_jobs.sh
+    tasks:
+      - task: hanabi
+        title: Hanabi
+
+  mini-hanabi:
+    br_scripts:
+      - scripts/run_mini_hanabi_br_jobs.sh
+    tasks:
+      - task: mini-hanabi
+        title: Mini-Hanabi

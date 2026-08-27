@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+dist/
+*.tsbuildinfo
+.pytest_cache/
+.DS_Store
+/data/
+ui/backend/data/
+ui/conventions/data/

@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hanabi AHT Evaluation</title>
+  <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  <style>
+    :root {
+      --bg: #0f0f0f;
+      --surface: #1a1a2e;
+      --surface2: #16213e;
+      --accent: #e94560;
+      --accent2: #0f3460;
+      --text: #eee;
+      --text2: #aaa;
+      --green: #2ecc71;
+      --yellow: #f1c40f;
+      --blue: #3498db;
+      --radius: 10px;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+    }
+    .container { max-width: 960px; margin: 0 auto; padding: 32px 20px; }
+    h1 { font-size: 28px; margin-bottom: 4px; }
+    h1 span { color: var(--accent); }
+    .subtitle { color: var(--text2); margin-bottom: 32px; font-size: 14px; }
+    .card {
+      background: var(--surface);
+      border-radius: var(--radius);
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .card h2 {
+      font-size: 16px;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--text2);
+      margin-bottom: 16px;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group { display: flex; flex-direction: column; gap: 6px; }
+    label { font-size: 13px; color: var(--text2); font-weight: 500; }
+    select, input[type="text"], input[type="number"] {
+      background: var(--bg);
+      border: 1px solid #333;
+      color: var(--text);
+      padding: 10px 12px;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    select:focus, input:focus { border-color: var(--accent); }
+    .btn {
+      background: var(--accent);
+      color: white;
+      border: none;
+      padding: 12px 28px;
+      border-radius: 6px;
+      font-size: 15px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.1s;
+      width: 100%;
+    }
+    .btn:hover { opacity: 0.9; }
+    .btn:active { transform: scale(0.98); }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-secondary {
+      background: var(--accent2);
+    }
+    .results-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .stat-box {
+      background: var(--bg);
+      border-radius: 8px;
+      padding: 16px;
+      text-align: center;
+    }
+    .stat-box .value {
+      font-size: 28px;
+      font-weight: 700;
+      color: var(--green);
+    }
+    .stat-box .label {
+      font-size: 11px;
+      color: var(--text2);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-top: 4px;
+    }
+    .histogram {
+      display: flex;
+      align-items: flex-end;
+      gap: 2px;
+      height: 80px;
+      padding: 0 4px;
+    }
+    .histogram .bar {
+      flex: 1;
+      background: var(--blue);
+      border-radius: 2px 2px 0 0;
+      min-height: 2px;
+      transition: height 0.3s;
+      position: relative;
+    }
+    .histogram .bar:hover { opacity: 0.8; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14px;
+    }
+    th {
+      text-align: left;
+      padding: 10px 12px;
+      color: var(--text2);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      border-bottom: 1px solid #333;
+    }
+    td {
+      padding: 10px 12px;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    tr:hover td { background: rgba(255,255,255,0.02); }
+    .rank { color: var(--yellow); font-weight: 700; }
+    .score { color: var(--green); font-weight: 600; }
+    .partner-tag {
+      display: inline-block;
+      background: var(--accent2);
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 12px;
+    }
+    .spinner {
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid rgba(255,255,255,0.3);
+      border-top-color: white;
+      border-radius: 50%;
+      animation: spin 0.6s linear infinite;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .meta { font-size: 12px; color: var(--text2); margin-top: 8px; }
+    .empty-state {
+      text-align: center;
+      padding: 40px;
+      color: var(--text2);
+    }
+    .tabs {
+      display: flex;
+      gap: 4px;
+      margin-bottom: 20px;
+    }
+    .tab {
+      padding: 8px 20px;
+      background: var(--surface);
+      border: none;
+      color: var(--text2);
+      border-radius: 6px 6px 0 0;
+      cursor: pointer;
+      font-size: 14px;
+      font-weight: 500;
+    }
+    .tab.active {
+      background: var(--surface2);
+      color: var(--text);
+    }
+    .file-upload {
+      border: 2px dashed #333;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.2s;
+    }
+    .file-upload:hover { border-color: var(--accent); }
+    .file-upload.has-file { border-color: var(--green); }
+    .or-divider {
+      text-align: center;
+      color: var(--text2);
+      font-size: 13px;
+      margin: 12px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
+
+  <script type="text/babel">
+    const { useState, useEffect, useCallback } = React;
+
+    function App() {
+      const [partners, setPartners] = useState({});
+      const [egos, setEgos] = useState({});
+      const [leaderboard, setLeaderboard] = useState([]);
+      const [tab, setTab] = useState('evaluate');
+
+      // Form state
+      const [agentName, setAgentName] = useState('');
+      const [partner, setPartner] = useState('bc_lstm');
+      const [egoKey, setEgoKey] = useState('iggi');
+      const [numEpisodes, setNumEpisodes] = useState(32);
+      const [useUpload, setUseUpload] = useState(false);
+      const [uploadFile, setUploadFile] = useState(null);
+      const [uploadActorType, setUploadActorType] = useState('mlp');
+      const [uploadHiddenDim, setUploadHiddenDim] = useState(512);
+      const [uploadActivation, setUploadActivation] = useState('relu');
+
+      // Eval state
+      const [loading, setLoading] = useState(false);
+      const [result, setResult] = useState(null);
+      const [error, setError] = useState(null);
+
+      useEffect(() => {
+        fetch('/api/partners').then(r => r.json()).then(setPartners);
+        fetch('/api/egos').then(r => r.json()).then(setEgos);
+        refreshLeaderboard();
+      }, []);
+
+      const refreshLeaderboard = () => {
+        fetch('/api/leaderboard').then(r => r.json()).then(d => setLeaderboard(d.entries || []));
+      };
+
+      const runEval = async () => {
+        setLoading(true);
+        setError(null);
+        setResult(null);
+
+        try {
+          let resp;
+          if (useUpload) {
+            if (!uploadFile) {
+              setError('Please select a checkpoint .zip file');
+              setLoading(false);
+              return;
+            }
+            const form = new FormData();
+            form.append('agent_name', agentName || uploadFile.name.replace(/\.zip$/, ''));
+            form.append('partner', partner);
+            form.append('num_episodes', numEpisodes);
+            form.append('actor_type', uploadActorType);
+            form.append('hidden_dim', uploadHiddenDim);
+            form.append('activation', uploadActivation);
+            form.append('checkpoint', uploadFile);
+            resp = await fetch('/api/evaluate_upload', { method: 'POST', body: form });
+          } else {
+            const egoInfo = egos[egoKey] || {};
+            resp = await fetch('/api/evaluate', {
+              method: 'POST',
+              headers: { 'Content-Type': 'application/json' },
+              body: JSON.stringify({
+                agent_name: agentName || (egoInfo.name || egoKey) + ' vs ' + (partners[partner]?.name || partner),
+                partner,
+                ego: egoKey,
+                num_episodes: numEpisodes,
+              }),
+            });
+          }
+
+          const data = await resp.json();
+          if (resp.ok) {
+            setResult(data);
+            refreshLeaderboard();
+          } else {
+            setError(data.error + (data.hint ? ` (${data.hint})` : ''));
+          }
+        } catch (e) {
+          setError(e.message);
+        } finally {
+          setLoading(false);
+        }
+      };
+
+      return (
+        <div className="container">
+          <h1>Hanabi <span>AHT</span> Evaluation</h1>
+          <p className="subtitle">
+            Submit policies and evaluate against held-out partners. Extensible to AH2AC2 formal submissions.
+          </p>
+
+          <div className="tabs">
+            <button className={`tab ${tab === 'evaluate' ? 'active' : ''}`} onClick={() => setTab('evaluate')}>
+              Evaluate
+            </button>
+            <button className={`tab ${tab === 'leaderboard' ? 'active' : ''}`} onClick={() => setTab('leaderboard')}>
+              Leaderboard ({leaderboard.length})
+            </button>
+          </div>
+
+          {tab === 'evaluate' && (
+            <>
+              <div className="card">
+                <h2>Configuration</h2>
+                <div style={{marginBottom: 16, display: 'flex', gap: 8}}>
+                  <button
+                    className={`tab ${!useUpload ? 'active' : ''}`}
+                    style={{borderRadius: 6}}
+                    onClick={() => setUseUpload(false)}>
+                    Built-in ego
+                  </button>
+                  <button
+                    className={`tab ${useUpload ? 'active' : ''}`}
+                    style={{borderRadius: 6}}
+                    onClick={() => setUseUpload(true)}>
+                    Upload checkpoint
+                  </button>
+                </div>
+
+                {!useUpload && (
+                  <div className="form-row">
+                    <div className="form-group">
+                      <label>Ego Agent (the agent being tested)</label>
+                      <select value={egoKey} onChange={e => setEgoKey(e.target.value)}>
+                        {Object.entries(egos).map(([k, v]) => (
+                          <option key={k} value={k}>{v.name}{v.trained ? ' *' : ''}</option>
+                        ))}
+                      </select>
+                      {egos[egoKey]?.trained && (
+                        <span style={{fontSize: 11, color: '#2ecc71', marginTop: 4}}>* Trained RL checkpoint</span>
+                      )}
+                    </div>
+                    <div className="form-group">
+                      <label>Held-out Partner (teammate)</label>
+                      <select value={partner} onChange={e => setPartner(e.target.value)}>
+                        {Object.entries(partners).map(([k, v]) => (
+                          <option key={k} value={k}>{v.name}</option>
+                        ))}
+                      </select>
+                    </div>
+                  </div>
+                )}
+
+                {useUpload && (
+                  <>
+                    <div
+                      className={`file-upload ${uploadFile ? 'has-file' : ''}`}
+                      onClick={() => document.getElementById('file-input').click()}
+                      style={{marginBottom: 12}}>
+                      <input id="file-input" type="file" accept=".zip"
+                        style={{display: 'none'}}
+                        onChange={e => setUploadFile(e.target.files[0])} />
+                      {uploadFile
+                        ? `Selected: ${uploadFile.name} (${(uploadFile.size/1024/1024).toFixed(1)} MB)`
+                        : 'Click to upload orbax checkpoint as .zip (must contain saved_train_run/ directory)'}
+                    </div>
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label>Actor type</label>
+                        <select value={uploadActorType} onChange={e => setUploadActorType(e.target.value)}>
+                          <option value="mlp">MLP</option>
+                          <option value="s5">S5</option>
+                          <option value="rnn">RNN</option>
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label>Hidden dim</label>
+                        <input type="number" value={uploadHiddenDim}
+                          onChange={e => setUploadHiddenDim(parseInt(e.target.value) || 512)} />
+                      </div>
+                    </div>
+                    <div className="form-row">
+                      <div className="form-group">
+                        <label>Activation</label>
+                        <select value={uploadActivation} onChange={e => setUploadActivation(e.target.value)}>
+                          <option value="relu">ReLU</option>
+                          <option value="tanh">Tanh</option>
+                        </select>
+                      </div>
+                      <div className="form-group">
+                        <label>Held-out Partner (teammate)</label>
+                        <select value={partner} onChange={e => setPartner(e.target.value)}>
+                          {Object.entries(partners).map(([k, v]) => (
+                            <option key={k} value={k}>{v.name}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+                    <p style={{fontSize: 11, color: '#666', marginBottom: 12}}>
+                      Architecture params are overridden by config.yaml if included in the zip.
+                    </p>
+                  </>
+                )}
+
+                <div className="form-row">
+                  <div className="form-group">
+                    <label>Label (for leaderboard)</label>
+                    <input type="text" placeholder="auto-generated if empty"
+                      value={agentName} onChange={e => setAgentName(e.target.value)} />
+                  </div>
+                  <div className="form-group">
+                    <label>Episodes</label>
+                    <input type="number" min="1" max="1000" value={numEpisodes}
+                      onChange={e => setNumEpisodes(parseInt(e.target.value) || 32)} />
+                  </div>
+                </div>
+
+                {!useUpload && egos[egoKey] && (
+                  <p style={{fontSize: 12, color: '#666', marginTop: -8, marginBottom: 12}}>
+                    {egos[egoKey].description}
+                  </p>
+                )}
+
+                <div style={{marginTop: 8}}>
+                  <button className="btn" onClick={runEval} disabled={loading}>
+                    {loading && <span className="spinner" />}
+                    {loading ? 'Evaluating...' : 'Run Evaluation'}
+                  </button>
+                </div>
+                {error && <p style={{color: '#e94560', marginTop: 12}}>{error}</p>}
+              </div>
+
+              {result && <ResultCard result={result} />}
+            </>
+          )}
+
+          {tab === 'leaderboard' && <Leaderboard entries={leaderboard} onRefresh={refreshLeaderboard} />}
+        </div>
+      );
+    }
+
+    function ResultCard({ result }) {
+      const scores = result.per_episode_scores || [];
+      const maxScore = Math.max(...scores, 1);
+
+      // Build histogram buckets (0..25)
+      const buckets = new Array(26).fill(0);
+      scores.forEach(s => {
+        const idx = Math.max(0, Math.min(25, Math.round(s)));
+        buckets[idx]++;
+      });
+      const maxBucket = Math.max(...buckets, 1);
+
+      return (
+        <div className="card">
+          <h2>Results</h2>
+          <div className="results-grid">
+            <div className="stat-box">
+              <div className="value">{result.mean_score.toFixed(1)}</div>
+              <div className="label">Mean</div>
+            </div>
+            <div className="stat-box">
+              <div className="value">{result.median_score.toFixed(1)}</div>
+              <div className="label">Median</div>
+            </div>
+            <div className="stat-box">
+              <div className="value" style={{color: '#3498db'}}>
+                {result.min_score.toFixed(0)}-{result.max_score.toFixed(0)}
+              </div>
+              <div className="label">Range</div>
+            </div>
+            <div className="stat-box">
+              <div className="value" style={{color: '#f1c40f'}}>
+                #{result.leaderboard_position}
+              </div>
+              <div className="label">Rank</div>
+            </div>
+          </div>
+
+          <label>Score Distribution ({result.num_episodes} episodes)</label>
+          <div className="histogram" style={{marginTop: 8}}>
+            {buckets.map((count, i) => (
+              <div key={i} className="bar"
+                style={{height: `${(count / maxBucket) * 100}%`}}
+                title={`Score ${i}: ${count} episodes`} />
+            ))}
+          </div>
+          <div style={{display: 'flex', justifyContent: 'space-between', marginTop: 4}}>
+            <span style={{fontSize: 11, color: '#666'}}>0</span>
+            <span style={{fontSize: 11, color: '#666'}}>25</span>
+          </div>
+
+          <div className="meta">
+            Evaluated in {result.eval_time_seconds}s | Partner: {result.partner_name} | {result.timestamp}
+          </div>
+        </div>
+      );
+    }
+
+    function Leaderboard({ entries, onRefresh }) {
+      if (entries.length === 0) {
+        return (
+          <div className="card">
+            <div className="empty-state">
+              <p>No submissions yet. Run an evaluation to get on the board.</p>
+            </div>
+          </div>
+        );
+      }
+
+      return (
+        <div className="card">
+          <h2>Leaderboard</h2>
+          <table>
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Agent</th>
+                <th>Partner</th>
+                <th>Mean</th>
+                <th>Median</th>
+                <th>Std</th>
+                <th>Episodes</th>
+                <th>Time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {entries.map((e, i) => (
+                <tr key={e.id}>
+                  <td className="rank">{i + 1}</td>
+                  <td>{e.agent_name}</td>
+                  <td><span className="partner-tag">{e.partner_name}</span></td>
+                  <td className="score">{e.mean_score.toFixed(1)}/25</td>
+                  <td>{e.median_score.toFixed(1)}</td>
+                  <td>{e.std.toFixed(1)}</td>
+                  <td>{e.num_episodes}</td>
+                  <td style={{color: '#666', fontSize: 12}}>{e.timestamp}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+          <div style={{marginTop: 12, display: 'flex', justifyContent: 'space-between', alignItems: 'center'}}>
+            <button className="btn btn-secondary" onClick={onRefresh} style={{width: 'auto', padding: '8px 20px'}}>
+              Refresh
+            </button>
+            <span style={{fontSize: 12, color: '#666'}}>
+              Saved to: evaluation/leaderboard.json
+            </span>
+          </div>
+        </div>
+      );
+    }
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>
