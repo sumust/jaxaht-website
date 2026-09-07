@@ -33,10 +33,6 @@ COPY agents/ /app/agents/
 COPY common/ /app/common/
 COPY envs/ /app/envs/
 COPY evaluation/ /app/evaluation/
-COPY marl/ /app/marl/
-COPY ego_agent_training/ /app/ego_agent_training/
-COPY open_ended_training/ /app/open_ended_training/
-COPY teammate_generation/ /app/teammate_generation/
 COPY download_eval_data.py /app/download_eval_data.py
 
 RUN mkdir -p /data && chmod 777 /data
