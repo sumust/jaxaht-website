@@ -25,6 +25,7 @@ export function Layout({ children, title, subtitle, right }: Props) {
                     <nav className="flex items-center gap-2 text-sm">
                         {!isHome && <Link to="/" className="btn-ghost">Home</Link>}
                         <Link to="/about" className="btn-ghost">About</Link>
+                        <Link to="/diversity" className="btn-ghost">Diversity Viewer</Link>
                         <a
                             href="https://github.com/LARG/jax-aht"
                             target="_blank"

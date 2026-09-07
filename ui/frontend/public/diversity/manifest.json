@@ -1,0 +1,28 @@
+{
+ "tasks": {
+  "hanabi": {
+   "label": "Hanabi"
+  },
+  "mini_hanabi": {
+   "label": "Mini-Hanabi"
+  },
+  "lbf_7x7": {
+   "label": "LBF 7x7"
+  },
+  "cramped_room": {
+   "label": "Overcooked Cramped Room"
+  },
+  "asymm_advantages": {
+   "label": "Overcooked Asymm"
+  },
+  "counter_circuit": {
+   "label": "Overcooked Counter Circuit"
+  },
+  "coord_ring": {
+   "label": "Overcooked Coord Ring"
+  },
+  "forced_coord": {
+   "label": "Overcooked Forced Coord"
+  }
+ }
+}

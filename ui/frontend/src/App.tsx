@@ -8,12 +8,14 @@ import { Prolific } from "./pages/Prolific"
 import { Study } from "./pages/Study"
 import { StudyComplete } from "./pages/StudyComplete"
 import { About } from "./pages/About"
+import { Diversity } from "./pages/Diversity"
 import { NotFound } from "./pages/NotFound"
 
 export default function App() {
     return (
         <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/diversity" element={<Diversity />} />
             <Route path="/about" element={<About />} />
             <Route path="/:env/play" element={<Play />} />
             <Route path="/:env/submit" element={<Submit />} />

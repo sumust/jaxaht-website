@@ -1,0 +1,175 @@
+{
+ "task": "cramped_room",
+ "points": [
+  {
+   "name": "brdiv-conf (1)",
+   "key": "brdiv_conf_1",
+   "x": 0.35933,
+   "y": 0.55765,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 261.577,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 0)",
+   "key": "comedi_1_0",
+   "x": 0.7179,
+   "y": 0.12523,
+   "cluster": 1,
+   "is_medoid": true,
+   "score": 264.58,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 1)",
+   "key": "comedi_1_1",
+   "x": 0.67818,
+   "y": -0.04227,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 206.864,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 3)",
+   "key": "comedi_1_3",
+   "x": 0.40994,
+   "y": 0.19289,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 225.959,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 4)",
+   "key": "comedi_1_4",
+   "x": 0.75724,
+   "y": -0.00369,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 211.534,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (1)",
+   "key": "ippo_mlp_1",
+   "x": 0.36452,
+   "y": 0.605,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 262.155,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (2)",
+   "key": "ippo_mlp_2",
+   "x": -0.25751,
+   "y": 0.67688,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 258.113,
+   "pairing": null
+  },
+  {
+   "name": "independent_agent_0.4",
+   "key": "independent_agent_0_4",
+   "x": 0.04158,
+   "y": -0.82337,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 91.973,
+   "pairing": null
+  },
+  {
+   "name": "onion_agent_0.1",
+   "key": "onion_agent_0_1",
+   "x": 0.15878,
+   "y": -0.21518,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 0.117,
+   "pairing": null
+  },
+  {
+   "name": "plate_agent_0.1",
+   "key": "plate_agent_0_1",
+   "x": -0.10237,
+   "y": -0.63103,
+   "cluster": 2,
+   "is_medoid": true,
+   "score": 20.727,
+   "pairing": null
+  },
+  {
+   "name": "brdiv-conf (0)",
+   "key": "brdiv_conf_0",
+   "x": -0.82197,
+   "y": 0.28918,
+   "cluster": 3,
+   "is_medoid": true,
+   "score": 211.564,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 0)",
+   "key": "lbrdiv_conf_1_0",
+   "x": -0.78302,
+   "y": 0.30249,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 205.667,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 1)",
+   "key": "lbrdiv_conf_1_1",
+   "x": -0.55096,
+   "y": 0.29784,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 225.266,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 2)",
+   "key": "lbrdiv_conf_1_2",
+   "x": -0.72817,
+   "y": -0.38466,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 222.483,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 2)",
+   "key": "comedi_1_2",
+   "x": 0.28364,
+   "y": -0.48297,
+   "cluster": 4,
+   "is_medoid": true,
+   "score": 213.917,
+   "pairing": null
+  },
+  {
+   "name": "independent_agent_0",
+   "key": "independent_agent_0",
+   "x": -0.25202,
+   "y": -0.53894,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 225.703,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (0)",
+   "key": "ippo_mlp_0",
+   "x": -0.2751,
+   "y": 0.07494,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 265.795,
+   "pairing": null
+  }
+ ]
+}

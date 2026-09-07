@@ -1,0 +1,175 @@
+{
+ "task": "asymm_advantages",
+ "points": [
+  {
+   "name": "comedi (1, 1)",
+   "key": "comedi_1_1",
+   "x": 0.76324,
+   "y": -0.14982,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 242.433,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 2)",
+   "key": "comedi_1_2",
+   "x": 0.74912,
+   "y": 0.16729,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 249.014,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 0)",
+   "key": "lbrdiv_conf_1_0",
+   "x": 0.85512,
+   "y": -0.1739,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 58.741,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 2)",
+   "key": "lbrdiv_conf_1_2",
+   "x": 0.88952,
+   "y": -0.17787,
+   "cluster": 1,
+   "is_medoid": true,
+   "score": 170.072,
+   "pairing": null
+  },
+  {
+   "name": "brdiv-conf (0)",
+   "key": "brdiv_conf_0",
+   "x": 0.02089,
+   "y": -0.44676,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 234.113,
+   "pairing": null
+  },
+  {
+   "name": "lbrdiv-conf (1, 1)",
+   "key": "lbrdiv_conf_1_1",
+   "x": 0.35322,
+   "y": 0.02521,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 162.039,
+   "pairing": null
+  },
+  {
+   "name": "plate_agent_0",
+   "key": "plate_agent_0",
+   "x": -0.06312,
+   "y": -0.63482,
+   "cluster": 2,
+   "is_medoid": true,
+   "score": 279.142,
+   "pairing": null
+  },
+  {
+   "name": "brdiv-conf (1)",
+   "key": "brdiv_conf_1",
+   "x": -0.31178,
+   "y": 0.44416,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 248.013,
+   "pairing": null
+  },
+  {
+   "name": "brdiv-conf (2)",
+   "key": "brdiv_conf_2",
+   "x": -0.56297,
+   "y": 0.60465,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 269.536,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 3)",
+   "key": "comedi_1_3",
+   "x": 0.32369,
+   "y": 0.73661,
+   "cluster": 3,
+   "is_medoid": true,
+   "score": 160.828,
+   "pairing": null
+  },
+  {
+   "name": "independent_agent_0",
+   "key": "independent_agent_0",
+   "x": -0.20673,
+   "y": 0.30786,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 291.523,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (2)",
+   "key": "ippo_mlp_2",
+   "x": 0.07802,
+   "y": 0.29528,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 253.231,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 0)",
+   "key": "comedi_1_0",
+   "x": -0.69778,
+   "y": -0.45792,
+   "cluster": 4,
+   "is_medoid": true,
+   "score": 544.298,
+   "pairing": null
+  },
+  {
+   "name": "comedi (1, 4)",
+   "key": "comedi_1_4",
+   "x": -0.30895,
+   "y": -0.13031,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 290.033,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (0)",
+   "key": "ippo_mlp_0",
+   "x": -0.88863,
+   "y": 0.02061,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 363.273,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp (1)",
+   "key": "ippo_mlp_1",
+   "x": -0.64805,
+   "y": -0.15675,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 334.934,
+   "pairing": null
+  },
+  {
+   "name": "onion_agent_0",
+   "key": "onion_agent_0",
+   "x": -0.34484,
+   "y": -0.27352,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 273.453,
+   "pairing": null
+  }
+ ]
+}

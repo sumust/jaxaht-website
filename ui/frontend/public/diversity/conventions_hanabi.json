@@ -1,0 +1,225 @@
+{
+ "task": "hanabi",
+ "points": [
+  {
+   "name": "bc_lstm_human_proxy",
+   "key": "bc_lstm_human_proxy",
+   "x": 0.61694,
+   "y": 0.23076,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 4.141,
+   "pairing": null
+  },
+  {
+   "name": "bc_lstm_v2",
+   "key": "bc_lstm_v2",
+   "x": 0.62181,
+   "y": 0.21233,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 3.891,
+   "pairing": null
+  },
+  {
+   "name": "flawed",
+   "key": "flawed",
+   "x": 0.71263,
+   "y": 0.24705,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 0.0,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_op_seed123 (0)",
+   "key": "ippo_s5_op_seed123_0",
+   "x": 0.57624,
+   "y": 0.32774,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 2.625,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_op_seed31415 (0)",
+   "key": "ippo_s5_op_seed31415_0",
+   "x": 0.87913,
+   "y": 0.08395,
+   "cluster": 1,
+   "is_medoid": true,
+   "score": 0.0,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_op_seed42 (0)",
+   "key": "ippo_s5_op_seed42_0",
+   "x": 0.62962,
+   "y": 0.0717,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 0.0,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_seed123 (0)",
+   "key": "ippo_s5_seed123_0",
+   "x": 0.47899,
+   "y": 0.21596,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 3.828,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_seed31415 (0)",
+   "key": "ippo_s5_seed31415_0",
+   "x": 0.65701,
+   "y": -0.17263,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 2.984,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_seed42 (0)",
+   "key": "ippo_s5_seed42_0",
+   "x": 0.48106,
+   "y": 0.30753,
+   "cluster": 1,
+   "is_medoid": false,
+   "score": 2.25,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp_seed1 (1)",
+   "key": "ippo_mlp_seed1_1",
+   "x": -0.0009,
+   "y": -0.6757,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 10.625,
+   "pairing": null
+  },
+  {
+   "name": "obl_r2d2_l1",
+   "key": "obl_r2d2_l1",
+   "x": 0.27213,
+   "y": -0.80402,
+   "cluster": 2,
+   "is_medoid": true,
+   "score": 10.781,
+   "pairing": null
+  },
+  {
+   "name": "obl_r2d2_l4",
+   "key": "obl_r2d2_l4",
+   "x": -0.09948,
+   "y": -0.42488,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 8.562,
+   "pairing": null
+  },
+  {
+   "name": "piers",
+   "key": "piers",
+   "x": -0.11175,
+   "y": -0.71854,
+   "cluster": 2,
+   "is_medoid": false,
+   "score": 9.516,
+   "pairing": null
+  },
+  {
+   "name": "internal",
+   "key": "internal",
+   "x": -0.90642,
+   "y": 0.06035,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 9.375,
+   "pairing": null
+  },
+  {
+   "name": "outer",
+   "key": "outer",
+   "x": -0.34868,
+   "y": -0.29123,
+   "cluster": 3,
+   "is_medoid": false,
+   "score": 8.047,
+   "pairing": null
+  },
+  {
+   "name": "van_den_bergh",
+   "key": "van_den_bergh",
+   "x": -0.3817,
+   "y": -0.14316,
+   "cluster": 3,
+   "is_medoid": true,
+   "score": 8.094,
+   "pairing": null
+  },
+  {
+   "name": "cautious",
+   "key": "cautious",
+   "x": -0.72404,
+   "y": 0.01962,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 10.891,
+   "pairing": null
+  },
+  {
+   "name": "iggi",
+   "key": "iggi",
+   "x": -0.76457,
+   "y": -0.03129,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 12.312,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp_seed0 (0)",
+   "key": "ippo_mlp_seed0_0",
+   "x": -0.73403,
+   "y": 0.69016,
+   "cluster": 4,
+   "is_medoid": true,
+   "score": 11.438,
+   "pairing": null
+  },
+  {
+   "name": "ippo_mlp_seed2 (2)",
+   "key": "ippo_mlp_seed2_2",
+   "x": -0.76092,
+   "y": 0.38698,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 12.156,
+   "pairing": null
+  },
+  {
+   "name": "ippo_s5_seed99999 (0)",
+   "key": "ippo_s5_seed99999_0",
+   "x": -0.65352,
+   "y": -0.31915,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 11.0,
+   "pairing": null
+  },
+  {
+   "name": "smartbot",
+   "key": "smartbot",
+   "x": -0.43957,
+   "y": 0.72644,
+   "cluster": 4,
+   "is_medoid": false,
+   "score": 8.984,
+   "pairing": null
+  }
+ ]
+}
