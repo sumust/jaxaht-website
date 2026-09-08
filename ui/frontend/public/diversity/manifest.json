@@ -7,22 +7,968 @@
    "label": "Mini-Hanabi"
   },
   "lbf_7x7": {
-   "label": "LBF 7x7"
+   "label": "Level-Based Foraging (7x7)",
+   "teammates": [
+    {
+     "key": "brdiv_conf1_0",
+     "name": "brdiv-conf1 (0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.333,
+     "file": "videos/lbf_7x7/brdiv_conf1_0.mp4"
+    },
+    {
+     "key": "brdiv_conf1_1",
+     "name": "brdiv-conf1 (1)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.167,
+     "file": "videos/lbf_7x7/brdiv_conf1_1.mp4"
+    },
+    {
+     "key": "brdiv_conf1_2",
+     "name": "brdiv-conf1 (2)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.083,
+     "file": "videos/lbf_7x7/brdiv_conf1_2.mp4"
+    },
+    {
+     "key": "brdiv_conf2_0",
+     "name": "brdiv-conf2 (0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.0,
+     "file": "videos/lbf_7x7/brdiv_conf2_0.mp4"
+    },
+    {
+     "key": "brdiv_conf2_1",
+     "name": "brdiv-conf2 (1)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.25,
+     "file": "videos/lbf_7x7/brdiv_conf2_1.mp4"
+    },
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.333,
+     "file": "videos/lbf_7x7/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/comedi_1_4.mp4"
+    },
+    {
+     "key": "entitled_agent",
+     "name": "entitled_agent",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/entitled_agent.mp4"
+    },
+    {
+     "key": "greedy_closest_teammate",
+     "name": "greedy_closest_teammate",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/greedy_closest_teammate.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "self-play",
+     "num_episodes": 2,
+     "mean_return": 0.333,
+     "file": "videos/lbf_7x7/human_proxy.mp4"
+    },
+    {
+     "key": "ippo_mlp_0",
+     "name": "ippo_mlp (0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/ippo_mlp_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_s2c0_2_0",
+     "name": "ippo_mlp_s2c0 (2, 0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.417,
+     "file": "videos/lbf_7x7/ippo_mlp_s2c0_2_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/lbrdiv_conf_1_2.mp4"
+    },
+    {
+     "key": "seq_agent_col",
+     "name": "seq_agent_col",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_col.mp4"
+    },
+    {
+     "key": "seq_agent_farthest",
+     "name": "seq_agent_farthest",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_farthest.mp4"
+    },
+    {
+     "key": "seq_agent_lexi",
+     "name": "seq_agent_lexi",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_lexi.mp4"
+    },
+    {
+     "key": "seq_agent_nearest",
+     "name": "seq_agent_nearest",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_nearest.mp4"
+    },
+    {
+     "key": "seq_agent_rcol",
+     "name": "seq_agent_rcol",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_rcol.mp4"
+    },
+    {
+     "key": "seq_agent_rlexi",
+     "name": "seq_agent_rlexi",
+     "partner": "BR",
+     "num_episodes": 2,
+     "mean_return": 0.5,
+     "file": "videos/lbf_7x7/seq_agent_rlexi.mp4"
+    }
+   ],
+   "env": "lbf"
   },
   "cramped_room": {
-   "label": "Overcooked Cramped Room"
+   "label": "Overcooked: Cramped Room",
+   "teammates": [
+    {
+     "key": "brdiv_conf_0",
+     "name": "brdiv-conf (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 220.0,
+     "file": "videos/cramped_room/brdiv_conf_0.mp4"
+    },
+    {
+     "key": "brdiv_conf_1",
+     "name": "brdiv-conf (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 273.2,
+     "file": "videos/cramped_room/brdiv_conf_1.mp4"
+    },
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 280.4,
+     "file": "videos/cramped_room/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 226.1,
+     "file": "videos/cramped_room/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 235.7,
+     "file": "videos/cramped_room/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 232.0,
+     "file": "videos/cramped_room/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 234.9,
+     "file": "videos/cramped_room/comedi_1_4.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "self-play",
+     "num_episodes": 1,
+     "mean_return": 0.1,
+     "file": "videos/cramped_room/human_proxy.mp4"
+    },
+    {
+     "key": "independent_agent_0",
+     "name": "independent_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 236.8,
+     "file": "videos/cramped_room/independent_agent_0.mp4"
+    },
+    {
+     "key": "independent_agent_0_4",
+     "name": "independent_agent_0.4",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 210.4,
+     "file": "videos/cramped_room/independent_agent_0_4.mp4"
+    },
+    {
+     "key": "ippo_mlp_0",
+     "name": "ippo_mlp (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 302.1,
+     "file": "videos/cramped_room/ippo_mlp_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_1",
+     "name": "ippo_mlp (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 275.9,
+     "file": "videos/cramped_room/ippo_mlp_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_2",
+     "name": "ippo_mlp (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 301.7,
+     "file": "videos/cramped_room/ippo_mlp_2.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 220.0,
+     "file": "videos/cramped_room/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 273.2,
+     "file": "videos/cramped_room/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 238.1,
+     "file": "videos/cramped_room/lbrdiv_conf_1_2.mp4"
+    },
+    {
+     "key": "onion_agent_0_1",
+     "name": "onion_agent_0.1",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 200.0,
+     "file": "videos/cramped_room/onion_agent_0_1.mp4"
+    },
+    {
+     "key": "plate_agent_0_1",
+     "name": "plate_agent_0.1",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 231.1,
+     "file": "videos/cramped_room/plate_agent_0_1.mp4"
+    }
+   ],
+   "env": "overcooked-v1"
   },
   "asymm_advantages": {
-   "label": "Overcooked Asymm"
+   "label": "Overcooked: Asymmetric Advantages",
+   "teammates": [
+    {
+     "key": "brdiv_conf_0",
+     "name": "brdiv-conf (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 200.0,
+     "file": "videos/asymm_advantages/brdiv_conf_0.mp4"
+    },
+    {
+     "key": "brdiv_conf_1",
+     "name": "brdiv-conf (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 321.7,
+     "file": "videos/asymm_advantages/brdiv_conf_1.mp4"
+    },
+    {
+     "key": "brdiv_conf_2",
+     "name": "brdiv-conf (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 323.4,
+     "file": "videos/asymm_advantages/brdiv_conf_2.mp4"
+    },
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 564.4,
+     "file": "videos/asymm_advantages/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 365.3,
+     "file": "videos/asymm_advantages/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 300.5,
+     "file": "videos/asymm_advantages/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 280.0,
+     "file": "videos/asymm_advantages/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 321.7,
+     "file": "videos/asymm_advantages/comedi_1_4.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "self-play",
+     "num_episodes": 1,
+     "mean_return": 239.5,
+     "file": "videos/asymm_advantages/human_proxy.mp4"
+    },
+    {
+     "key": "independent_agent_0",
+     "name": "independent_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 239.6,
+     "file": "videos/asymm_advantages/independent_agent_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_0",
+     "name": "ippo_mlp (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 323.4,
+     "file": "videos/asymm_advantages/ippo_mlp_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_1",
+     "name": "ippo_mlp (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 280.5,
+     "file": "videos/asymm_advantages/ippo_mlp_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_2",
+     "name": "ippo_mlp (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 301.7,
+     "file": "videos/asymm_advantages/ippo_mlp_2.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 322.2,
+     "file": "videos/asymm_advantages/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 321.8,
+     "file": "videos/asymm_advantages/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 321.7,
+     "file": "videos/asymm_advantages/lbrdiv_conf_1_2.mp4"
+    },
+    {
+     "key": "onion_agent_0",
+     "name": "onion_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 128.5,
+     "file": "videos/asymm_advantages/onion_agent_0.mp4"
+    },
+    {
+     "key": "plate_agent_0",
+     "name": "plate_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 202.3,
+     "file": "videos/asymm_advantages/plate_agent_0.mp4"
+    }
+   ],
+   "env": "overcooked-v1"
   },
   "counter_circuit": {
-   "label": "Overcooked Counter Circuit"
+   "label": "Overcooked: Counter Circuit",
+   "teammates": [
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 174.6,
+     "file": "videos/counter_circuit/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 120.4,
+     "file": "videos/counter_circuit/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 61.2,
+     "file": "videos/counter_circuit/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 120.2,
+     "file": "videos/counter_circuit/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 63.5,
+     "file": "videos/counter_circuit/comedi_1_4.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "self-play",
+     "num_episodes": 1,
+     "mean_return": 105.8,
+     "file": "videos/counter_circuit/human_proxy.mp4"
+    },
+    {
+     "key": "independent_agent_0",
+     "name": "independent_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 195.0,
+     "file": "videos/counter_circuit/independent_agent_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_cc_0",
+     "name": "ippo_mlp_cc (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 232.6,
+     "file": "videos/counter_circuit/ippo_mlp_cc_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_cc_1",
+     "name": "ippo_mlp_cc (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 254.0,
+     "file": "videos/counter_circuit/ippo_mlp_cc_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_cc_2",
+     "name": "ippo_mlp_cc (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 232.7,
+     "file": "videos/counter_circuit/ippo_mlp_cc_2.mp4"
+    },
+    {
+     "key": "ippo_mlp_pass_0",
+     "name": "ippo_mlp_pass (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 128.9,
+     "file": "videos/counter_circuit/ippo_mlp_pass_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_pass_1",
+     "name": "ippo_mlp_pass (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 20.1,
+     "file": "videos/counter_circuit/ippo_mlp_pass_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_pass_2",
+     "name": "ippo_mlp_pass (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 202.6,
+     "file": "videos/counter_circuit/ippo_mlp_pass_2.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 120.3,
+     "file": "videos/counter_circuit/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 100.4,
+     "file": "videos/counter_circuit/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 80.4,
+     "file": "videos/counter_circuit/lbrdiv_conf_1_2.mp4"
+    },
+    {
+     "key": "onion_agent_0",
+     "name": "onion_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 40.0,
+     "file": "videos/counter_circuit/onion_agent_0.mp4"
+    },
+    {
+     "key": "onion_agent_0_9",
+     "name": "onion_agent_0.9",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 120.0,
+     "file": "videos/counter_circuit/onion_agent_0_9.mp4"
+    },
+    {
+     "key": "plate_agent_0",
+     "name": "plate_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 145.5,
+     "file": "videos/counter_circuit/plate_agent_0.mp4"
+    },
+    {
+     "key": "plate_agent_0_9",
+     "name": "plate_agent_0.9",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 140.5,
+     "file": "videos/counter_circuit/plate_agent_0_9.mp4"
+    }
+   ],
+   "env": "overcooked-v1"
   },
   "coord_ring": {
-   "label": "Overcooked Coord Ring"
+   "label": "Overcooked: Coordination Ring",
+   "teammates": [
+    {
+     "key": "brdiv_conf1_1",
+     "name": "brdiv-conf1 (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 192.6,
+     "file": "videos/coord_ring/brdiv_conf1_1.mp4"
+    },
+    {
+     "key": "brdiv_conf1_2",
+     "name": "brdiv-conf1 (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 202.3,
+     "file": "videos/coord_ring/brdiv_conf1_2.mp4"
+    },
+    {
+     "key": "brdiv_conf2_0",
+     "name": "brdiv-conf2 (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 231.0,
+     "file": "videos/coord_ring/brdiv_conf2_0.mp4"
+    },
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 236.4,
+     "file": "videos/coord_ring/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 214.3,
+     "file": "videos/coord_ring/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 161.4,
+     "file": "videos/coord_ring/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 161.5,
+     "file": "videos/coord_ring/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 189.6,
+     "file": "videos/coord_ring/comedi_1_4.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 249.7,
+     "file": "videos/coord_ring/human_proxy.mp4"
+    },
+    {
+     "key": "independent_agent_0",
+     "name": "independent_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 259.4,
+     "file": "videos/coord_ring/independent_agent_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_1",
+     "name": "ippo_mlp (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 279.9,
+     "file": "videos/coord_ring/ippo_mlp_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_2",
+     "name": "ippo_mlp (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 279.8,
+     "file": "videos/coord_ring/ippo_mlp_2.mp4"
+    },
+    {
+     "key": "ippo_mlp_3",
+     "name": "ippo_mlp (3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 341.8,
+     "file": "videos/coord_ring/ippo_mlp_3.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 180.0,
+     "file": "videos/coord_ring/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 200.0,
+     "file": "videos/coord_ring/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 210.0,
+     "file": "videos/coord_ring/lbrdiv_conf_1_2.mp4"
+    },
+    {
+     "key": "onion_agent_0",
+     "name": "onion_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 0.0,
+     "file": "videos/coord_ring/onion_agent_0.mp4"
+    },
+    {
+     "key": "plate_agent_0",
+     "name": "plate_agent_0",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 231.1,
+     "file": "videos/coord_ring/plate_agent_0.mp4"
+    }
+   ],
+   "env": "overcooked-v1"
   },
   "forced_coord": {
-   "label": "Overcooked Forced Coord"
+   "label": "Overcooked: Forced Coordination",
+   "teammates": [
+    {
+     "key": "brdiv_conf1_0",
+     "name": "brdiv-conf1 (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 242.0,
+     "file": "videos/forced_coord/brdiv_conf1_0.mp4"
+    },
+    {
+     "key": "brdiv_conf1_2",
+     "name": "brdiv-conf1 (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 20.0,
+     "file": "videos/forced_coord/brdiv_conf1_2.mp4"
+    },
+    {
+     "key": "brdiv_conf2_1",
+     "name": "brdiv-conf2 (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 243.0,
+     "file": "videos/forced_coord/brdiv_conf2_1.mp4"
+    },
+    {
+     "key": "brdiv_conf3_0",
+     "name": "brdiv-conf3 (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 176.0,
+     "file": "videos/forced_coord/brdiv_conf3_0.mp4"
+    },
+    {
+     "key": "brdiv_conf3_2",
+     "name": "brdiv-conf3 (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 243.0,
+     "file": "videos/forced_coord/brdiv_conf3_2.mp4"
+    },
+    {
+     "key": "comedi_1_0",
+     "name": "comedi (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 289.5,
+     "file": "videos/forced_coord/comedi_1_0.mp4"
+    },
+    {
+     "key": "comedi_1_1",
+     "name": "comedi (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 108.0,
+     "file": "videos/forced_coord/comedi_1_1.mp4"
+    },
+    {
+     "key": "comedi_1_2",
+     "name": "comedi (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 62.5,
+     "file": "videos/forced_coord/comedi_1_2.mp4"
+    },
+    {
+     "key": "comedi_1_3",
+     "name": "comedi (1, 3)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 63.5,
+     "file": "videos/forced_coord/comedi_1_3.mp4"
+    },
+    {
+     "key": "comedi_1_4",
+     "name": "comedi (1, 4)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 154.0,
+     "file": "videos/forced_coord/comedi_1_4.mp4"
+    },
+    {
+     "key": "human_proxy",
+     "name": "human_proxy",
+     "partner": "self-play",
+     "num_episodes": 1,
+     "mean_return": 42.5,
+     "file": "videos/forced_coord/human_proxy.mp4"
+    },
+    {
+     "key": "independent_agent_0_6",
+     "name": "independent_agent_0.6",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 42.0,
+     "file": "videos/forced_coord/independent_agent_0_6.mp4"
+    },
+    {
+     "key": "ippo_mlp_0",
+     "name": "ippo_mlp (0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 264.5,
+     "file": "videos/forced_coord/ippo_mlp_0.mp4"
+    },
+    {
+     "key": "ippo_mlp_1",
+     "name": "ippo_mlp (1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 243.5,
+     "file": "videos/forced_coord/ippo_mlp_1.mp4"
+    },
+    {
+     "key": "ippo_mlp_2",
+     "name": "ippo_mlp (2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 86.0,
+     "file": "videos/forced_coord/ippo_mlp_2.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_0",
+     "name": "lbrdiv-conf (1, 0)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 243.5,
+     "file": "videos/forced_coord/lbrdiv_conf_1_0.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_1",
+     "name": "lbrdiv-conf (1, 1)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 221.0,
+     "file": "videos/forced_coord/lbrdiv_conf_1_1.mp4"
+    },
+    {
+     "key": "lbrdiv_conf_1_2",
+     "name": "lbrdiv-conf (1, 2)",
+     "partner": "BR",
+     "num_episodes": 1,
+     "mean_return": 176.0,
+     "file": "videos/forced_coord/lbrdiv_conf_1_2.mp4"
+    }
+   ],
+   "env": "overcooked-v1"
   }
  }
 }
